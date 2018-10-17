@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_categories" >
+        <item >Child Welfare</item>
+        <item >Women Welfare</item>
+        <item >Senior Citizen Welfare</item>
+        <item >Disaster Relief</item>
+        <item >Poverty Relief</item>
+        <item >Others</item>
+
+    </string-array>
+
+</resources>
