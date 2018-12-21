@@ -1,9 +1,12 @@
 package com.example.risha.vijaysetu_cometogeherforcause;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +26,7 @@ public class EntryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry);
         databaseNGO=FirebaseDatabase.getInstance().getReference("NGO");
-        editTextTitle=findViewById(R.id.editTextTitle);
+        editTextTitle= findViewById(R.id.padd);
         editTextDescription=findViewById(R.id.editTextDescription);
         editTextPhone=findViewById(R.id.editTextPhone);
         spinnerCategory=findViewById(R.id.spinnerCategory);
@@ -38,24 +41,38 @@ public class EntryActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.sign_in_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.button_contact_us)
+            startActivity(new Intent(this,ContactUsActivity.class));
+
+        return super.onOptionsItemSelected(item);
+    }
     private void addvalue()
     {
-        String title= editTextTitle.getText().toString();
+        String title= editTextTitle.getText().toString().trim();
         String category=spinnerCategory.getSelectedItem().toString();
-        String description= editTextDescription.getText().toString();
-        String phone= editTextPhone.getText().toString();
+        String description= editTextDescription.getText().toString().trim();
+        String phone= editTextPhone.getText().toString().trim();
         if(!TextUtils.isEmpty(title))
         {
-            if(!TextUtils.isEmpty(description))
-            {
-                if(!TextUtils.isEmpty(phone))
-                    phone="Phone not Provided";
-               String id= databaseNGO.push().getKey();
-               NGO ngo=new NGO(id,title,category,description,phone);
-               databaseNGO.child(id).setValue(ngo);
-               Toast.makeText(this,"Added Successfully",Toast.LENGTH_LONG).show();
+            if(!TextUtils.isEmpty(description)) {
+                if(TextUtils.isEmpty(phone)) {phone="Phone not Provided";}
 
+                DatabaseReference mref = databaseNGO.push();
+                mref.child("NGOName").setValue(title);
+                mref.child("NGOCategory").setValue(category);
+                mref.child("NGODescription").setValue(description);
+                mref.child("NGOPhone").setValue(phone);
+                Toast.makeText(EntryActivity.this, "Added Successfully", Toast.LENGTH_LONG).show();
+                clearValues();
             }
+
             else{
                 Toast.makeText(this,"You should enter a Description",Toast.LENGTH_LONG).show();
             }
@@ -64,5 +81,11 @@ public class EntryActivity extends AppCompatActivity {
         else{
             Toast.makeText(this,"You should enter a Title",Toast.LENGTH_LONG).show();
         }
+    }
+
+    private void clearValues() {
+        editTextTitle.setText("");
+        editTextDescription.setText("");
+        editTextPhone.setText("");
     }
 }

@@ -10,15 +10,12 @@
         android:id="@+id/imageButton"
         android:layout_width="0dp"
         android:layout_height="241dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/card_background"
+        android:background="@drawable/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/card_background" />
+        app:srcCompat="@color/Default" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -52,27 +49,29 @@
 
     <EditText
         android:id="@+id/editTextEmail"
-        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        style="@style/Base.TextAppearance.AppCompat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editTextPassword"
-        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        style="@style/Base.TextAppearance.AppCompat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
         app:layout_constraintStart_toStartOf="@+id/editTextEmail"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />

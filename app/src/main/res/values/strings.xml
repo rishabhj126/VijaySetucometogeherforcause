@@ -111,4 +111,6 @@
     <string name="hint_phone">Phone Number(Optional)</string>
     <string name="text_details">Enter Details</string>
     <string name="submit">Submit</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9044422816522157/4060934361</string>
+    <string name="ad_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

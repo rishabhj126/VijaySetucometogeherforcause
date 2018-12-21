@@ -8,50 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:72740003789:android:45900d0251f6b6c5",
-        "android_client_info": {
-          "package_name": "com.example.risha.vijaysetu"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "72740003789-aps1ekg68e8ei20h1v37o102ik8tel0i.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.risha.vijaysetu",
-            "certificate_hash": "18fa7b86d870c3b8c76e2993229e0d8ae0326246"
-          }
-        },
-        {
-          "client_id": "72740003789-2s0npjmg6amunfslvfmabekmit72e44g.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAZPv5U1Ndu12-W7K3i4JkVXcYwh6pF9JU"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "72740003789-2s0npjmg6amunfslvfmabekmit72e44g.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:72740003789:android:817ad5e7e521f773",
         "android_client_info": {
           "package_name": "com.example.risha.vijaysetu_cometogeherforcause"

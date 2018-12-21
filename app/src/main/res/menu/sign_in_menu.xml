@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/button_contact_us"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:title="Contact Us"
+        app:showAsAction="ifRoom" />
+
+</menu>

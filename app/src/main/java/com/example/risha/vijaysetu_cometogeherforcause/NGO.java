@@ -1,17 +1,7 @@
 package com.example.risha.vijaysetu_cometogeherforcause;
 
 public class NGO {
-    String NGOId;
     String NGOName;
-
-    public String getNGOCategory() {
-        return NGOCategory;
-    }
-
-    public void setNGOCategory(String NGOCategory) {
-        this.NGOCategory = NGOCategory;
-    }
-
     String NGOCategory;
     String NGODescription;
     String NGOPhone;
@@ -19,21 +9,13 @@ public class NGO {
     public NGO() {
     }
 
-    public NGO(String NGOId, String NGOName,String NGOCategory, String NGODescription, String NGOPhone) {
-        this.NGOId = NGOId;
+    public NGO( String NGOName,String NGOCategory, String NGODescription, String NGOPhone) {
         this.NGOName = NGOName;
         this.NGOCategory=NGOCategory;
         this.NGODescription = NGODescription;
         this.NGOPhone = NGOPhone;
     }
 
-    public String getNGOId() {
-        return NGOId;
-    }
-
-    public void setNGOId(String NGOId) {
-        this.NGOId = NGOId;
-    }
 
     public String getNGOName() {
         return NGOName;
@@ -58,4 +40,13 @@ public class NGO {
     public void setNGOPhone(String NGOPhone) {
         this.NGOPhone = NGOPhone;
     }
+
+    public String getNGOCategory() {
+        return NGOCategory;
+    }
+
+    public void setNGOCategory(String NGOCategory) {
+        this.NGOCategory = NGOCategory;
+    }
+
 }
